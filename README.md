@@ -30,3 +30,32 @@ methods.forEach(function(method){
 apply
 call
 の使い分けを理解しておきましょう
+
+var resolve = require('path').resolve;
+this.set('views', resolve('views'));
+
+
+
+
+## 処理の流れをまとめる
+### express()
+概要: Expressアプリケーションのインスタンスを生成する。
+EventEmitter、application.jsのメソッドを継承する。
+ライブラリ mixin
+  var mixin = require('merge-descriptors');
+
+Request、Responseメソッドを作成
+Object.createを利用している。
+
+app.init()  : application.jsの内容
+最後にアプリケーションのデフォルト設定を行う。
+ここはやらなくてもいいと思うけど、一旦仮
+etag = 参考:http://blog.livedoor.jp/aki_mana/archives/6729330.html
+
+### Routerの設定
+    app.get('/', (req, res) => res.send('Hello World!'))
+application.jsの以下の箇所でメソッド作成している。
+methods.forEach(function(method){
+
+lazyrouterメソッド
+Routerインスタンスの生成を行う。
