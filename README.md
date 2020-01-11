@@ -59,3 +59,12 @@ methods.forEach(function(method){
 
 lazyrouterメソッド
 Routerインスタンスの生成を行う。
+
+Routeのhandleにfunctionを登録
+
+### listen
+httpサーバの作成
+
+### requestを受けたときの処理
+app.handleを実行
+->route.handleを実行
