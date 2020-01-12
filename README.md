@@ -40,6 +40,8 @@ this.set('views', resolve('views'));
 ## 処理の流れをまとめる
 ### express()
 概要: Expressアプリケーションのインスタンスを生成する。
+appインスタンスを作成します。これがrequestを受け付ける窓口になる場所です。
+
 EventEmitter、application.jsのメソッドを継承する。
 ライブラリ mixin
   var mixin = require('merge-descriptors');
@@ -68,3 +70,9 @@ httpサーバの作成
 ### requestを受けたときの処理
 app.handleを実行
 ->route.handleを実行
+->Layer.prototype.handle_request
+->最初に設定したfunctionを実行
+
+
+## Router
+Router(index.js) 1->1 Layer N->1 Route(router/route.js)
