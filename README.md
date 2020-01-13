@@ -34,7 +34,11 @@ call
 var resolve = require('path').resolve;
 this.set('views', resolve('views'));
 
+JavaScriptのbindを利用する。
+route.dispatch.bind(route)
+参考:https://foreignkey.toyao.net/archives/763
 
+prototypeとfunctionって一緒？
 
 
 ## 処理の流れをまとめる
@@ -64,6 +68,10 @@ Routerインスタンスの生成を行う。
 
 Routeのhandleにfunctionを登録
 
+route.jsにもmethods.forEachが存在する。
+
+Routeは1URL/Methodsごとに生成される
+
 ### listen
 httpサーバの作成
 
@@ -76,3 +84,9 @@ app.handleを実行
 
 ## Router
 Router(index.js) 1->1 Layer N->1 Route(router/route.js)
+
+
+
+クラスの主なプロパティ
+Route: path, stack, methods
+Layer: path, handle(Routeのdispatch), params, opts)
