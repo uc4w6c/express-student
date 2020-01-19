@@ -1,4 +1,5 @@
 # express-student
+https://qiita.com/YutaSaito1991/items/59717ac866d2749e75b2
 
 ## 処理追いかける
 express()
@@ -86,8 +87,6 @@ app.handleを実行
 
 ## Router
 Router(index.js) 1->1 Layer N->1 Route(router/route.js)
-
-
 
 クラスの主なプロパティ
 Route: path, stack, methods

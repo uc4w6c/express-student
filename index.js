@@ -6,7 +6,11 @@ app.use('/hello', function (req, res, next) {
     console.log('Request Type:', req.method)
     next()
 })
-*/  
+*/
+app.get('/', (req, res) => {
+    res.send('Hello World');
+})
+
 app.get('/hello', (req, res, next) => {
     console.log('hello1');
     // res.send('Hello World');
