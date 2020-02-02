@@ -1,5 +1,7 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const kafka = require('./routes/kafka');
+
+const app = express();
 
 /*
 app.use('/hello', function (req, res, next) {
@@ -22,6 +24,7 @@ app.get('/hello', (req, res, next) => {
 app.post('/hello', (req, res) => {
     res.send('Hello World');
 })
+app.use('/kafka', kafka);
 
 app.listen(3000);
 // app.listen(3000, () => console.log('Example app listening on port 3000!'))
