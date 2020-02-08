@@ -1,7 +1,8 @@
 const { Kafka } = require('kafkajs');
 
+// kafkaSub.jsとkafkaSub2.jsを起動すると、RoundRobinして自動的に1つ側だけに送信してくれる
 const kafka = new Kafka({
-  clientId: 'my-app1',
+  clientId: 'my-app2',
   brokers: ['localhost:9092']
 });
 
